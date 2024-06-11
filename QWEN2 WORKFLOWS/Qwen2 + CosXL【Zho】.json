@@ -1,0 +1,606 @@
+{
+  "last_node_id": 24,
+  "last_link_id": 37,
+  "nodes": [
+    {
+      "id": 6,
+      "type": "ModelSamplingContinuousEDM",
+      "pos": [
+        2120,
+        490
+      ],
+      "size": {
+        "0": 370,
+        "1": 110
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 5,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            30
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingContinuousEDM"
+      },
+      "widgets_values": [
+        "v_prediction",
+        120,
+        0.002
+      ]
+    },
+    {
+      "id": 9,
+      "type": "EmptyLatentImage",
+      "pos": [
+        2120,
+        650
+      ],
+      "size": {
+        "0": 370,
+        "1": 110
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            33
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        6
+      ]
+    },
+    {
+      "id": 23,
+      "type": "Qwen2_ModelLoader_Zho",
+      "pos": [
+        2120,
+        810
+      ],
+      "size": [
+        370,
+        80
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "Qwen2",
+          "type": "QWEN2",
+          "links": [
+            35
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "tokenizer",
+          "type": "TK",
+          "links": [
+            36
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Qwen2_ModelLoader_Zho"
+      },
+      "widgets_values": [
+        "Qwen/Qwen2-7B-Instruct"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        2120,
+        340
+      ],
+      "size": {
+        "0": 370,
+        "1": 100
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            5
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            31,
+            32
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            34
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "cosxl.safetensors"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "DisplayText_Zho",
+      "pos": [
+        2840,
+        750
+      ],
+      "size": [
+        500,
+        140
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 37,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            26
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DisplayText_Zho"
+      },
+      "widgets_values": [
+        "",
+        "In the embrace of a golden sunset over a serene beach, a surreal tableau unfolds: a lone figure stands amidst whispering waves, cradlinging a bouquet of vibrant, ethereal roses. The air, charged with a palpable romance, seems to shimmer with an otherworldly glow, blending the mundane with the fantastical. This is not just a scene, but a dreamlike exploration of love's its most transcendent form, where the boundaries between reality and imagination blur, leaving only the essence of passion and connection."
+      ]
+    },
+    {
+      "id": 18,
+      "type": "CLIPTextEncode",
+      "pos": [
+        2510,
+        450
+      ],
+      "size": [
+        310,
+        80
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 32,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            21
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "low quality"
+      ]
+    },
+    {
+      "id": 19,
+      "type": "CLIPTextEncode",
+      "pos": [
+        2510,
+        340
+      ],
+      "size": [
+        310,
+        60
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 31,
+          "slot_index": 0
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 26,
+          "widget": {
+            "name": "text"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            20
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 21,
+      "type": "VAEDecode",
+      "pos": [
+        2840,
+        650
+      ],
+      "size": [
+        500,
+        50
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 27
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 34,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            29
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 15,
+      "type": "KSampler",
+      "pos": [
+        2840,
+        340
+      ],
+      "size": [
+        500,
+        260
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 30,
+          "slot_index": 0
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 20
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 21,
+          "slot_index": 2
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 33,
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            27
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        184594486853868,
+        "randomize",
+        30,
+        3,
+        "dpmpp_2m",
+        "karras",
+        1
+      ]
+    },
+    {
+      "id": 22,
+      "type": "PreviewImage",
+      "pos": [
+        2120,
+        940
+      ],
+      "size": {
+        "0": 1220,
+        "1": 840
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 29
+        }
+      ],
+      "title": "🏖️Qwen2 + CosXL",
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 24,
+      "type": "Qwen2_Zho",
+      "pos": [
+        2510,
+        580
+      ],
+      "size": [
+        310,
+        310
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "QWEN2",
+          "link": 35
+        },
+        {
+          "name": "tokenizer",
+          "type": "TK",
+          "link": 36
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            37
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Qwen2_Zho"
+      },
+      "widgets_values": [
+        "爱情、浪漫、海边、夕阳、玫瑰花、超现实主义",
+        "You are creating a prompt for Stable Diffusion to generate an image. First step: understand the input and generate a text prompt for the input. Second step: only respond in English with the prompt itself in phrase, but embellish it as needed but keep it under 200 tokens."
+      ]
+    }
+  ],
+  "links": [
+    [
+      5,
+      5,
+      0,
+      6,
+      0,
+      "MODEL"
+    ],
+    [
+      20,
+      19,
+      0,
+      15,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      21,
+      18,
+      0,
+      15,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      26,
+      14,
+      0,
+      19,
+      1,
+      "STRING"
+    ],
+    [
+      27,
+      15,
+      0,
+      21,
+      0,
+      "LATENT"
+    ],
+    [
+      29,
+      21,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ],
+    [
+      30,
+      6,
+      0,
+      15,
+      0,
+      "MODEL"
+    ],
+    [
+      31,
+      5,
+      1,
+      19,
+      0,
+      "CLIP"
+    ],
+    [
+      32,
+      5,
+      1,
+      18,
+      0,
+      "CLIP"
+    ],
+    [
+      33,
+      9,
+      0,
+      15,
+      3,
+      "LATENT"
+    ],
+    [
+      34,
+      5,
+      2,
+      21,
+      1,
+      "VAE"
+    ],
+    [
+      35,
+      23,
+      0,
+      24,
+      0,
+      "QWEN2"
+    ],
+    [
+      36,
+      23,
+      1,
+      24,
+      1,
+      "TK"
+    ],
+    [
+      37,
+      24,
+      0,
+      14,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7513148009015781,
+      "offset": {
+        "0": -1653.8755060469118,
+        "1": -289.8443920577963
+      }
+    }
+  },
+  "version": 0.4
+}
