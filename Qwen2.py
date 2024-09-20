@@ -14,7 +14,7 @@ class Qwen2_ModelLoader_Zho:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "model_name": (["Qwen/Qwen2-7B-Instruct", "Qwen/Qwen2-72B-Instruct"],),
+                "model_name": (["Qwen/Qwen2-7B-Instruct", "Qwen/Qwen2-72B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct", "Qwen/Qwen2.5-14B-Instruct", "Qwen/Qwen2.5-32B-Instruct", "Qwen/Qwen2.5-72B-Instruct"],),
             }
         }
 
