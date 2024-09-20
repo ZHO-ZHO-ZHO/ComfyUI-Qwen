@@ -1,16 +1,21 @@
 
 ![qwen2](https://github.com/ZHO-ZHO-ZHO/ComfyUI-Qwen-2/assets/140084057/f6f2593e-7794-4c6a-a594-491d4457700b)
 
-<h1 align="center">Qwen-2 in ComfyUI</h1>
+<h1 align="center">Qwen-2.5 in ComfyUI</h1>
 
+<!---
 ![screenshot-20240612-002830](https://github.com/ZHO-ZHO-ZHO/ComfyUI-Qwen-2/assets/140084057/4c4fa10b-9beb-402a-b281-d4c6c4bfb5a7)
+--->
+
+![screenshot-20240921-043734](https://github.com/user-attachments/assets/ecb8b10e-8568-4205-b257-8297335a75e2)
+
 
 
 ## 项目介绍 | Info
 
-- 将 [Qwen2](https://github.com/QwenLM/Qwen2) 模型引入到 ComfyUI 中，目前支持 Qwen2-7B-Instruct 和 Qwen2-72B-Instruct 双模型，速度快且性能强，中文表现很不错，可用于 生成/补全提示词 或畅聊人生！
+- 将 [Qwen2.5](https://github.com/QwenLM/Qwen2.5) 模型引入到 ComfyUI 中，目前支持 Qwen2-Instruct 和 Qwen2.5（0.5B、1.5B、3B、7B、14B、32B、72B）-Instruct 全系列模型，速度快且性能强，中文表现很不错，可用于 生成/补全提示词 或畅聊人生！
 
-- 版本：V1.0 支持系统提示词，支持单/多轮对话双模式，支持中文输入自动并输出英文提示词
+- 版本：V2.0 支持全新 Qwen2.5，支持系统提示词，支持单/多轮对话双模式，支持中文输入自动并输出英文提示词
 
 
 
@@ -64,7 +69,15 @@
 
 ## 工作流 | Workflow
 
-### V1.0 工作流
+### V2.0 工作流
+
+  [Qwen2.5 + Flux.1 Dev Story](https://github.com/ZHO-ZHO-ZHO/ComfyUI-Qwen/blob/main/QWEN2%20WORKFLOWS/QWen2.5%20%2B%20Flux.1%20Dev%20Story%E3%80%90Zho%E3%80%91.json)
+
+  ![screenshot-20240921-052306](https://github.com/user-attachments/assets/e5efe9ea-a411-4856-b9f7-90658b2a05b3)
+
+
+
+### V1.0 工作流（兼容新版）
 
   [Qwen2 + CosXL【Zho】](https://github.com/ZHO-ZHO-ZHO/ComfyUI-Qwen-2/blob/main/QWEN2%20WORKFLOWS/Qwen2%20%2B%20CosXL%E3%80%90Zho%E3%80%91.json)
 
@@ -80,6 +93,12 @@
 
 
 ## 更新日志 | Changelog
+
+
+20240921
+
+- V2.0： 新增支持全新 Qwen2.5 系列模型 + 故事化工作流）（+Flux Dev）
+
 
 20240611
 
@@ -102,12 +121,12 @@
 🔗 **社交媒体**：
 - 个人页：[-Zho-](https://jike.city/zho)
 - Bilibili：[我的B站主页](https://space.bilibili.com/484366804)
-- X（Twitter）：[我的Twitter](https://twitter.com/ZHOZHO672070)
+- X（Twitter）：[我的Twitter](https://twitter.com/ZHO_ZHO_ZHO)
 - 小红书：[我的小红书主页](https://www.xiaohongshu.com/user/profile/63f11530000000001001e0c8?xhsshare=CopyLink&appuid=63f11530000000001001e0c8&apptime=1690528872)
 
 💡 **支持我**：
 - B站：[B站充电](https://space.bilibili.com/484366804)
-- 爱发电：[为我充电](https://afdian.net/a/ZHOZHO)
+- 爱发电：[为我充电](https://afdian.com/a/ZHOZHO)
 
 
 ## Credits
