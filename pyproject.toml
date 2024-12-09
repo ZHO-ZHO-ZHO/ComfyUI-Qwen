@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-qwen-2"
+description = "Using Qwen-2 in ComfyUI"
+version = "1.0.0"
+license = "LICENSE"
+dependencies = ["transformers>=4.40.0"]
+
+[project.urls]
+Repository = "https://github.com/ZHO-ZHO-ZHO/ComfyUI-Qwen-2"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-Qwen-2"
+Icon = ""
