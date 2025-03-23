@@ -28,6 +28,8 @@
    - ⛱️Qwen2：支持系统指令设置（System Instruction）     
 
    - ⛱️Qwen2 Chat：支持系统指令设置（System Instruction）+ 多轮对话
+
+   - ⛱️Qwen2 Unload model：从显存中卸载模型，延缓显存溢出
   
 
 - 节点示例：
@@ -93,6 +95,10 @@
 
 
 ## 更新日志 | Changelog
+
+20250323
+
+- V2.1： 加入Unload Model节点
 
 
 20240921
